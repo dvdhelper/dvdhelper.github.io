@@ -18,7 +18,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     <title></title>
 </head>
 <style>
@@ -42,8 +41,7 @@
     .mask-box {
         position: fixed;
         min-height: 100vh;
-        background-color: rgba(0,0,0,.9);
-        opacity: 0.5;
+        background-color: #000；
         
         z-index: 999;
         width: 100%;
@@ -56,13 +54,11 @@
         line-height: 35px;
         font-size:30px;
     }
+    body{
+          background-color: #000；}
 </style>
 <body class="white-gradient-bg">
-   <!-- 蒙版/遮罩层 -->
-   <div class="mask-box" id="download-box">
         <div class="hint-txt">1、点击右上角(...)图标</div>
         <div class="hint-txt">2、选择 在浏览器中 打开</div>
-    </div>
-
 </body>
 </html>
