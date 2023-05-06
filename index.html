@@ -1,1 +1,67 @@
-hello word
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <script type="text/javascript">
+
+        var ua = navigator.userAgent.toLowerCase();
+        var isWeixin = ua.indexOf('micromessenger') != -1;
+        console.log(isWeixin);
+        if (isWeixin) {
+            $('.mask-box').css('display','block');
+        }else{
+            document.location.href="/pro.html";
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <title></title>
+</head>
+<style>
+    .content{
+        width: 100%;
+        height: 100%;
+        background-color: red;
+    }
+    .show-mask-btn {
+        background: rgb(4, 208, 71);
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+ 
+    .show-mask-btn p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    .mask-box {
+        position: fixed;
+        min-height: 100vh;
+        background-color: rgba(0,0,0,.5);
+        opacity: 0.5;
+        display:none;
+        z-index: 999;
+        width: 100%;
+    }
+    .hint-txt {
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+    }
+</style>
+<body class="white-gradient-bg">
+   <!-- 蒙版/遮罩层 -->
+   <div class="mask-box" id="download-box">
+        <div class="hint-txt">1、点击右上角图标</div>
+        <div class="hint-txt">2、选择 在浏览器中 打开</div>
+    </div>
+
+</body>
+</html>
